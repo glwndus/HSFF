@@ -1,0 +1,280 @@
+.baji-mark,
+#stext,
+#sbtn {
+    height: 40px;
+}
+
+.baji, #stext, #sbtn {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.baji-mark {
+    line-height: 40px;
+}
+
+#sbtn {
+    padding-top: 0;
+    padding-bottom: 0;    
+    text-align: center;
+}
+
+#searchbox {
+    text-align: right;
+    margin-top: 1.2em;
+}
+
+#stext {
+    padding-left: 0.5em;
+    margin: 0px 3px;
+}
+
+.listtable span {
+    border-left: none;
+    border-right: none;
+    padding: 12px 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.lt-head {
+    font-weight: normal;
+}
+
+#listbox {
+    margin-top: 15px;
+}
+
+.listtable a {
+    display: block;
+    text-align: left;
+    font-size: 1.15em;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.listtable a:hover {
+    text-decoration: underline;
+}
+
+.listtable li {
+    overflow: hidden;
+}
+
+.listtable li:hover {
+    background-color: #fcfcfc;
+}
+
+.bcol-55 {width: 55px;}
+
+.bcol-100 {width: 100px;}
+
+.bcol-70 {width: 70px;}
+
+.bcol-90 {width: 90px;}
+
+.bcol-rest {width: calc(100% - 405px);}
+
+#pagibox {
+    text-align:center;
+}
+
+
+#pagibox a {
+    display: block;
+    width: 30px;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 0xp;
+    margin-left: 0px;
+}
+
+#pagibox ul {
+    list-style: none;
+    display: inline-block;
+    margin-left: 0px;
+    text-indent: 0px;
+}
+
+#pagibox li {
+    float: left;
+}
+
+.bactive {
+    color: black;
+    font-weight: bold;
+}
+
+.blockbtn {
+    background-image: url(../images/bc_icon_chev.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 10px;
+}
+
+.blockprev {
+    transform: rotate(180deg);
+}
+
+.blockdbbtn {
+    background-image: url(../images/bc_icon_dbchev.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 10px;
+}
+
+.blockfirst {
+    transform: rotate(180deg);
+}
+
+.listtable li {
+    min-width: auto;
+}
+
+/*썸네일형 보드 스타일*/
+
+.bcol-no {width: 80px;}
+.bcol-pic {width: 250px;}
+.bcol-cont {
+    width: calc(100% - 330px);
+}
+
+#thumbboard .listtable>li:not(:first-of-type) {
+    padding: 30px 0px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#thumbboard .listtable>li:not(:first-of-type) span {
+    border-bottom: none;
+    padding: 0px;
+}
+
+.listtable>li:not(:first-of-type) .bcol-no {
+    line-height: 145px;
+}
+
+.bcol-pic a {
+    display: block;
+    height: 160px;
+}
+
+#thumbboard a:hover {
+    text-decoration: none;
+}
+
+/*li중에서 얘(첫째)만빼고 그 안에있는 .bcol-cont*/
+.listtable>li:not(:first-of-type) .bcol-cont {
+    padding-left: 40px!important;
+}
+
+.bcol-cont p {
+    color: #444;
+    font-size: 1.15em;
+}
+
+.bcol-cont a>span {
+    display: block;
+    float: none;
+    text-align: left;
+    color: #777;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.bcol-cont ul {
+    text-indent: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+.bcol-cont ul span {
+    display: inline;
+    float: none;
+    text-align: left;
+    font-size: 1em;
+}
+
+.bcol-cont ul span::after {
+    content: " :";
+}
+
+.bcol-cont ul li::before {
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-right: 0.3em;
+}
+
+.listtable a {
+    white-space: normal;
+}
+
+@media all and (max-width:720px) {
+    .bcol-55,
+    .bcol-100,
+    .bcol-70,
+    .lt-head {
+        display: none!important;
+    }
+    
+    .bcol-rest {
+        width: 100%;
+    }
+    
+    .listtable span {
+        padding: 0px;
+        border-bottom: none!important;        
+    }
+    
+    .listtable>li {
+        padding: 0.5em 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    
+    .bcol-90 {
+        border-radius: 1px;
+        margin-right: 10px;
+        margin-top: 5px;
+        background-color: #f0f0f0;
+    }
+    
+    #sbtn, #stext, .baji {
+        width: 100%!important;
+        margin-top: 5px;
+        display: block;
+        margin-left: 0px;
+    }
+    
+    .bcol-no {
+        display: none!important;
+    }
+    
+    .bcol-pic, .bcol-cont {
+        float: none!important;
+        width: 100%;
+        height: auto!important;
+    }
+    
+    .bcol-pic a {
+        height: 200px;
+    }
+    
+    .listtable>li:not(:first-of-type) .bcol-cont {
+        padding: 1em 0!important;
+    }
+    
+    .bcol-cont {
+        word-break: keep-all;
+    }
+    
+}
+
+
+
+

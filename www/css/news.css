@@ -1,0 +1,289 @@
+#chart {
+    margin-top: 50px;
+}
+
+#chart>div {
+    overflow: auto;
+}
+
+.person {
+    border: 1px solid #2b6097;
+    text-align: center;
+    background-color: white;
+}
+
+.position {
+    background-color: #e6f0fa;
+    color: #333;
+    padding: 0.9em 0px;
+    font-weight: bold;
+}
+
+.pinfo {
+    padding: 0.9em 0px;
+}
+
+.pinfo p {
+    margin: 0.3em;
+    line-height: normal;
+}
+
+.pname {
+    color: #0c69d0;
+}
+
+#chief, #midline {
+    position: relative;
+    width: 690px;
+    margin: auto;
+}
+
+#chief .person {
+    width: 300px;
+    position: relative;
+    margin: auto;
+}
+
+#chief .person::before,
+#chief .person::after
+{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 1px;
+    background-color: #aaa;
+    position: absolute;
+    top: 50%;
+}
+
+#chief .person::before {
+    left: -36px;
+}
+#chief .person::after {
+    right: -36px;
+}
+
+#staff {
+    padding-top: 20px;
+    position: relative;
+    padding-bottom: 90px;
+    overflow-y: auto!important;
+    overflow-x: hidden!important;
+}
+
+#staff::before {
+    content: "";
+    display: block;
+    height: 1px;
+    left: calc((100% - 60px) / 10);
+    right: calc(((100% - 60px) / 10) - 1px);
+    background-color: #aaa;
+    position: absolute;
+    top: 0px;
+}
+
+#staff .person {
+    width: calc((100% - 60px) / 5);
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+
+#staff .person::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    background-color: #aaa;
+}
+
+#staff .person:last-of-type {
+    margin-right: 0px;
+}
+
+.officer {
+    border:  1px solid #aaa;
+    background-color: #f5f5f5;
+    padding: 1em 0;
+    text-align: center;
+    width: 160px;
+}
+
+.monitor, .advisor, .council{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.monitor {left: 0;}
+
+.advisor, .council {right: 0;}
+
+#midline {
+    height: 100px;
+}
+
+.council::before {
+    content: "";
+    display: block;
+    width: 185px;
+    height: 1px;
+    background-color: #aaa;
+    position: absolute;
+    top: 50%;
+    left: -185px;
+}
+
+.council::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: #aaa;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -187px;
+}
+
+.indust {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.indust::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #aaa;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+}
+
+
+@media all and (max-width:720px) {
+    
+    #chief, #midline {
+        width: 100%;
+    }
+    
+    #chief .person {
+        width: 100%;
+    }
+    
+    #staff {
+        padding-top: 0px;
+    }
+    
+    #staff .person {
+        width: calc(100% - 20px);
+        float: none;
+        margin-left: 20px;
+    }
+    
+    .monitor, .advisor {
+        position: relative;
+        transform: none;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 120px;
+    }
+    
+    .monitor::before,
+    .advisor::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        background-color: #aaa;
+        left: 50%;
+        top: -21px;
+    }
+    
+    #chief .person::after,
+    #chief .person::before {
+        content: none;
+    }
+    
+    #chief::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        top: 0;
+        bottom: 0;
+        background-color: #aaa;
+        left: 10px;
+        z-index: -1;
+    }
+    
+    .council {
+        position: relative;
+        margin-left: 20px;
+    }
+    
+    .council::after {
+        left: -11px;
+    }
+    .council::before {
+        left: -11px;
+        width: 10px;
+    }
+    
+    #staff::before {
+        content: none;
+    }
+    
+    #staff .person::before {
+        content: none;
+    }
+    
+    #staff .person::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: calc(100% + 21px);
+        background-color: #aaa;
+        left: -11px;
+        top: calc(-50% - 21px);
+    }
+    
+    #staff .person::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        background-color: #aaa;
+        left: -11px;
+        top: 50%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
